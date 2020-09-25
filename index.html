@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Aitken Digital</title>
+	<meta name="Aitken Digital" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+
+    <svg display="none">
+        <symbol id="icon-target" viewBox="0 0 512 512">
+            <path d="M511 68.36c-2.246-6.45-7.855-10.946-14.645-11.731L459.61 52.39l-4.242-36.743C454.586 8.86 450.094 3.246 443.641 1c-6.45-2.25-13.457-.645-18.29 4.187l-72.636 72.637a17.557 17.557 0 0 0-5.055 14.504l5.254 45.54-16.18 16.183c-79.957-69.059-201.277-65.653-277.152 10.222-79.441 79.442-79.441 208.704 0 288.145 79.441 79.441 208.703 79.441 288.145 0 75.875-75.875 79.28-197.195 10.222-277.148l16.184-16.184 45.539 5.254a17.548 17.548 0 0 0 14.504-5.055l72.636-72.637c4.833-4.832 6.434-11.84 4.188-18.289zM326.508 431.202c-67.742 67.742-177.969 67.742-245.711 0-67.742-67.746-67.742-177.969 0-245.715 64.172-64.168 166.46-67.55 234.652-10.152l-27.433 27.434c-53.012-42.422-130.813-39.079-179.914 10.023-52.688 52.687-52.688 138.418 0 191.105s138.418 52.688 191.105 0c49.102-49.101 52.445-126.902 10.023-179.914l27.434-27.433c57.399 68.191 54.016 170.48-10.156 234.652zM195.73 316.27c5.86 5.859 15.36 5.859 21.22 0l19.945-19.95c4.476 12.465 1.73 26.961-8.239 36.93-13.758 13.762-36.148 13.762-49.906 0-13.762-13.758-13.762-36.145 0-49.906 9.965-9.969 24.465-12.715 36.926-8.239l-19.946 19.95c-5.859 5.855-5.859 15.355 0 21.215zm42.301-63.52c-25.168-15.555-58.691-12.43-80.5 9.379-25.457 25.457-25.457 66.883 0 92.34s66.883 25.46 92.34 0c21.809-21.809 24.934-55.332 9.379-80.5l28.594-28.598c30.816 41.149 27.535 99.922-9.856 137.313-40.988 40.988-107.683 40.988-148.672 0-40.988-40.989-40.988-107.684 0-148.672 37.387-37.39 96.164-40.676 137.309-9.856zM417.18 133.848l-34.989-4.04-4.039-34.988 50.34-50.34 2.54 21.98c.882 7.653 6.843 13.622 14.507 14.513l21.98 2.535zm0 0"/>
+        </symbol>
+
+        <!-- <symbol id="icon-funnel" viewBox="0 0 480 480">
+            <path d="M432 0c-26.472 0-48 21.528-48 48 0 23.736 17.336 43.448 40 47.28V112h-96c-4.416 0-8 3.584-8 8v24h-72V95.28c22.664-3.824 40-23.536 40-47.28 0-26.472-21.528-48-48-48s-48 21.528-48 48c0 23.736 17.336 43.448 40 47.28V144h-72v-24c0-4.416-3.584-8-8-8H56V95.28C78.664 91.456 96 71.744 96 48 96 21.528 74.472 0 48 0S0 21.528 0 48c0 23.736 17.336 43.448 40 47.28V120c0 4.416 3.584 8 8 8h96v16h-40c-4.416 0-8 3.584-8 8v48a8.003 8.003 0 0 0 4.048 6.96L208 268.296V320a8.003 8.003 0 0 0 4.224 7.056 8.006 8.006 0 0 0 8.216-.4l48-32A8.01 8.01 0 0 0 272 288v-19.704l107.952-61.336A8.003 8.003 0 0 0 384 200v-48c0-4.416-3.584-8-8-8h-40v-16h96c4.416 0 8-3.584 8-8V95.28c22.664-3.824 40-23.536 40-47.28 0-26.472-21.528-48-48-48zM16 48c0-17.648 14.352-32 32-32s32 14.352 32 32-14.352 32-32 32-32-14.352-32-32zm192 0c0-17.648 14.352-32 32-32s32 14.352 32 32-14.352 32-32 32-32-14.352-32-32zm160 112v35.344L260.048 256.68a8.003 8.003 0 0 0-4.048 6.96v20.08l-32 21.336V263.64a8.003 8.003 0 0 0-4.048-6.96L112 195.344V160h256zm64-80c-17.648 0-32-14.352-32-32s14.352-32 32-32 32 14.352 32 32-14.352 32-32 32zM240 336c-39.696 0-72 32.304-72 72s32.304 72 72 72 72-32.304 72-72-32.304-72-72-72zm-8 96c-4.408 0-8-3.592-8-8h-16c0 13.232 10.768 24 24 24v15.36c-27.096-3.904-48-27.208-48-55.36s20.904-51.456 48-55.36V368c-13.232 0-24 10.768-24 24s10.768 24 24 24h16c4.408 0 8 3.592 8 8 0 4.408-3.592 8-8 8h-16zm16 31.36V448c13.232 0 24-10.768 24-24s-10.768-24-24-24h-16c-4.408 0-8-3.592-8-8 0-4.408 3.592-8 8-8h16c4.408 0 8 3.592 8 8h16c0-13.232-10.768-24-24-24v-15.36c27.096 3.904 48 27.208 48 55.36s-20.904 51.456-48 55.36z"/>
+        </symbol> -->
+
+        <symbol id="icon-funnel" viewBox="0 0 512 512">
+            <path d="M298.42 120a44.79 44.79 0 0 0 2.58-15c0-24.813-20.187-45-45-45s-45 20.187-45 45a44.79 44.79 0 0 0 2.58 15H61v82.209l150 120V392h90v-69.791l150-120V120H298.42zM256 90c8.271 0 15 6.729 15 15s-6.729 15-15 15-15-6.729-15-15 6.729-15 15-15zm15 217.791V362h-30v-54.209L118.762 210h274.476L271 307.791zM421 180H91v-30h330v30zM136 0c-24.813 0-45 20.187-45 45s20.187 45 45 45 45-20.187 45-45-20.187-45-45-45zm0 60c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15zM376 0c-24.813 0-45 20.187-45 45s20.187 45 45 45 45-20.187 45-45-20.187-45-45-45zm0 60c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15zM256 422c-24.813 0-45 20.187-45 45s20.187 45 45 45 45-20.187 45-45-20.187-45-45-45zm0 60c-8.271 0-15-6.729-15-15s6.729-15 15-15 15 6.729 15 15-6.729 15-15 15z"/>
+        </symbol>
+
+        <symbol id="icon-money" viewBox="0 0 512 512">
+            <path d="M467 29H45C20.187 29 0 49.187 0 74v268c0 24.813 20.187 45 45 45h148v66H96c-8.284 0-15 6.716-15 15s6.716 15 15 15h320c8.284 0 15-6.716 15-15s-6.716-15-15-15h-97v-66h148c24.813 0 45-20.187 45-45V74c0-24.813-20.187-45-45-45zM289 453h-66v-66h66zm193-111c0 8.271-6.729 15-15 15H45c-8.271 0-15-6.729-15-15V74c0-8.271 6.729-15 15-15h422c8.271 0 15 6.729 15 15z"/>
+            <path d="M312 293H116.213L168 241.213l5.394 5.394c5.857 5.857 15.355 5.857 21.213 0L232 209.213l13.394 13.394c5.857 5.857 15.355 5.857 21.213 0l56-56c5.858-5.857 5.858-15.355 0-21.213-5.857-5.857-15.355-5.857-21.213 0L256 190.787l-13.394-13.394c-5.857-5.857-15.355-5.857-21.213 0L184 214.787l-5.394-5.394c-5.857-5.857-15.355-5.857-21.213 0L95 271.787V124c0-8.284-6.716-15-15-15s-15 6.716-15 15c0 199.063-.4 185.467.899 189.074 1.542 4.287 5.036 7.852 9.748 9.279 3.291.996-10.816.647 236.353.647 8.284 0 15-6.716 15-15s-6.716-15-15-15zM416.304 193.32c-7.474-2.644-19.662-7.085-25.769-11.874-.37-.291-1.062-2.032-.576-4.619.234-1.242 1.308-5.388 5.332-6.601 6.214-1.883 12.112-.646 15.982 2.22 6.109 5.563 15.57 5.14 21.156-.956 5.579-6.089 5.182-15.535-.872-21.139 0 0-6.95-6.188-16.888-9.116V140c0-8.284-6.716-15-15-15s-15 6.716-15 15v2.17c-26.962 9.806-33.302 46.688-12.646 62.884 9.41 7.378 22.857 12.507 34.272 16.547 7.436 2.63 8.191 7.962 7.517 11.973-.751 4.463-4.596 12.034-14.244 12.097-10.002.064-12.375-.303-19.675-5.081-6.933-4.536-16.228-2.597-20.766 4.336-4.537 6.932-2.596 16.229 4.336 20.766 7.974 5.219 14.29 7.805 21.205 9.016v1.443c0 8.284 6.716 15 15 15s15-6.716 15-15v-3.139c36.342-13.135 41.164-65.71 1.636-79.692z"/>
+        </symbol>
+
+        <symbol id="icon-quote" viewBox="0 0 475.082 475.081">
+            <path d="M164.45 219.27h-63.954c-7.614 0-14.087-2.664-19.417-7.994-5.327-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177 7.139-37.401 21.416-51.678 14.276-14.272 31.503-21.411 51.678-21.411h18.271c4.948 0 9.229-1.809 12.847-5.424 3.616-3.617 5.424-7.898 5.424-12.847V54.819c0-4.948-1.809-9.233-5.424-12.85-3.617-3.612-7.898-5.424-12.847-5.424h-18.271c-19.797 0-38.684 3.858-56.673 11.563-17.987 7.71-33.545 18.132-46.68 31.267-13.134 13.129-23.553 28.688-31.262 46.677C3.855 144.039 0 162.931 0 182.726v200.991c0 15.235 5.327 28.171 15.986 38.834 10.66 10.657 23.606 15.985 38.832 15.985h109.639c15.225 0 28.167-5.328 38.828-15.985 10.657-10.663 15.987-23.599 15.987-38.834V274.088c0-15.232-5.33-28.168-15.994-38.832-10.656-10.656-23.603-15.986-38.828-15.986zM459.103 235.256c-10.656-10.656-23.599-15.986-38.828-15.986h-63.953c-7.61 0-14.089-2.664-19.41-7.994-5.332-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177 7.139-37.401 21.409-51.678 14.271-14.272 31.497-21.411 51.682-21.411h18.267c4.949 0 9.233-1.809 12.848-5.424 3.613-3.617 5.428-7.898 5.428-12.847V54.819c0-4.948-1.814-9.233-5.428-12.85-3.614-3.612-7.898-5.424-12.848-5.424h-18.267c-19.808 0-38.691 3.858-56.685 11.563-17.984 7.71-33.537 18.132-46.672 31.267-13.135 13.129-23.559 28.688-31.265 46.677-7.707 17.987-11.567 36.879-11.567 56.674v200.991c0 15.235 5.332 28.171 15.988 38.834 10.657 10.657 23.6 15.985 38.828 15.985h109.633c15.229 0 28.171-5.328 38.827-15.985 10.664-10.663 15.985-23.599 15.985-38.834V274.088c.001-15.233-5.321-28.168-15.978-38.832z"/>
+        </symbol>
+    </svg>
+
+</head>
+<body class="">
+
+    <div class="container-fluid hero-wrap">
+        <div class="container">
+            <div class="header">
+                <div class="logo-wrap">
+                    <img src="img/aitken-digital-logo-full-white.png" alt="" class="header-logo">
+                </div>
+                <div class="desktop-menu">
+                    <ul class="desktop-menu__list">
+                        <li class="desktop-menu__li"><a href="#ourAgencySection">Our Agency</a> </li>
+                        <li class="desktop-menu__li"><a href="#offerSection">Our Services</a> </li>
+                        <li class="desktop-menu__li"><a href="#ourFocusSection">Our Focus</a> </li>
+                        <li class="desktop-menu__li"><a href="#testimonialSection">Testimonials</a> </li>
+                        <li class="desktop-menu__li"><a href="#contactSection" class="desktop-menu__cta">Get a FREE Quote</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__li">Menu Item</li>
+                        <li class="mobile-menu__li">Menu Item</li>
+                        <li class="mobile-menu__li">Menu Item</li>
+                        <li class="mobile-menu__li">Menu Item</li>
+                    </ul>
+                </div>
+                <button class="menu-btn" id="menuBtn">
+                    <span></span>
+                </button>
+            </div>
+            <div class="">
+                <h1 class="hero-title">We Build Exceptional Digital Experiences</h1>
+                <p class="hero-subtext">We’re a full-service digital marketing agency that combines digital marketing and design to help people connect, transact, and explore online.</p>
+                <a href="#contactSection" class="hero-cta">Get a FREE Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid"  id="ourAgencySection">
+        <div class="container our-agency__section">
+            <h2 class="our-agency__title"><span>Our</span> Agency</h2>
+            <p class="our-agency__subtitle">We don't settle for anything other than exceptional results.
+
+            </p>
+            <div class="our-agency__col-wrap">
+                <div class="our-agency__col">
+                    <div class="our-agency__icon-wrap">
+                        <svg class="our-agency__icon" data-aos="fade-up">
+                            <use xlink:href="#icon-target"></use>
+                        </svg>
+                        <svg class="our-agency__icon">
+                            <use xlink:href="#icon-target"></use>
+                        </svg>
+                    </div>
+                    <h3 class="our-agency__text">Targeted<br> Advertising</h3>
+                    <p class="our-agency__subtext">Leverage targeted ads on social and search platforms to reach your ideal client.</p>
+                </div>
+                <div class="our-agency__col">
+                    <div class="our-agency__icon-wrap">
+                        <svg class="our-agency__icon" data-aos="fade-up">
+                            <use xlink:href="#icon-funnel"></use>
+                        </svg>
+                        <svg class="our-agency__icon">
+                            <use xlink:href="#icon-funnel"></use>
+                        </svg>
+                    </div>
+                    <h3 class="our-agency__text">Lead<br> Nurturing</h3>
+                    <p class="our-agency__subtext">Automate your cold-traffic strategy with high-converting nurture campaigns.</p>
+                </div>
+                <div class="our-agency__col">
+                    <div class="our-agency__icon-wrap">
+                        <svg class="our-agency__icon" data-aos="fade-up">
+                            <use xlink:href="#icon-money"></use>
+                        </svg>
+                        <svg class="our-agency__icon">
+                            <use xlink:href="#icon-money"></use>
+                        </svg>
+                    </div>
+                    <h3 class="our-agency__text">Revenue<br>Growth</h3>
+                    <p class="our-agency__subtext">Gain the edge over your competition and boost revenue with a proven lead acquisition system.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid" id="offerSection">
+        <div class="container">
+            <div class="offer__section">
+                <div class="col">
+                    <div class="offer__img-wrap">
+                        <img src="img/office-1.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text">
+                        <h2 class="offer__title">What We Offer</h2>
+                        <h3 class="offer__subtitle">Whatever your business needs are, we can provide a custom digital solution.</h3>
+                        <ul class="offer__list">
+                            <li>Programmatic Ads</li>
+                            <li>Social Ads (Facebook, Instagram, LinkedIn, etc.)</li>
+                            <li>Search Ads (Google, Bing, Yahoo)</li>
+                            <li>SEO (Search Engine Optimization)</li>
+                            <li>Web Development</li>
+                            <li>Shopify Integrations</li>
+                            <li>Marketo Integrations</li>
+                            <li>Lead Nurturing & Follow Up</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid ourFocus__section" id="ourFocusSection">
+        <div class="container">
+            <div class="ourFocus__content-wrap">
+                <div class="ourFocus__text-wrap">
+                    <h2 class="ourFocus__title">Our Focus</h2>
+                    <h3 class="ourFocus__subtitle">Not Your Average Agency</h3>
+                    <p class="ourFocus__text">In a world obsessed with likes and comments, we keep our focus on what matters the most - revenue.</p>
+                </div>
+                <div class="ourFocus__img-wrap">
+                    <img src="img/phone-1.png" alt="" class="ourFocus__img">
+                    <img src="img/phone-2.png" alt="" class="ourFocus__img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial__section" id="testimonialSection">
+        <h2 class="testimonial__title">Our Results</h2>
+        <h3 class="testimonial__subtitle">Don't just take our word for it - Hear what our clients are saying:</h3>
+
+        <div class="testimonial__item">
+            <svg class="testimonial__icon">
+                <use xlink:href="#icon-quote"></use>
+            </svg>
+            <div class="testimonial__img-wrap">
+                <img src="img/chad.jpg" alt="" class="testimonial__img">
+            </div>
+            <p class="testimonial__text">“My ads are a success! This weekend I put 2 homes under contract with the online leads I received.” - Chad Christensen</p>
+        </div> 
+
+        <div class="testimonial__item">
+            <svg class="testimonial__icon">
+                <use xlink:href="#icon-quote"></use>
+            </svg>
+            <div class="testimonial__img-wrap">
+                <img src="img/alicia.jpg" alt="" class="testimonial__img">
+            </div>
+            <p class="testimonial__text">“I'm very pleased - Aitken Digital has helped me attract more leads and clients for my business.” - Alicia Matthews</p>
+        </div> 
+
+        <div class="testimonial__item">
+            <svg class="testimonial__icon">
+                <use xlink:href="#icon-quote"></use>
+            </svg>
+            <div class="testimonial__img-wrap">
+                <img src="img/george.jpg" alt="" class="testimonial__img">
+            </div>
+            <p class="testimonial__text">“I'm not well-versed in social media, so having Aitken Digital take care of my digital ads was a lifesaver. Now I can focus on my business.” - George Lawrence</p>
+        </div> 
+
+    </div>    
+    
+    <div class="container-fluid contact__section" id="contactSection">
+        <div class="container">
+            <h2 class="contact__title">Contact Us for a Free Quote</h2>
+            <p class="contact__subtitle">Please drop us a line to inquire about our services.</p>
+            <form action="mailto:hello@aitkendigital.com" method="post" enctype="text/plain" id="contactForm" class="contact__form-wrap">
+                <span class="contact__input-title">Name</span>
+                <input type="text" name="name" class="contact__input">
+                <span class="contact__input-title">Company / Organization</span>
+                <input type="text" name="company" class="contact__input">
+                <span class="contact__input-title">Email Address</span>
+                <input type="text" name="mail" class="contact__input">
+                <span class="contact__input-title">Phone Number</span>
+                <input type="text" name="phone" class="contact__input">
+                <span class="contact__input-title">Message</span>
+                <textarea name="comment" rows="5" class="contact__input"></textarea>
+                <input type="submit" value="Send Message" class="contact__submit-btn">
+                <!-- <input type="reset" value="Reset"> -->
+            </form>
+        </div>
+    </div>
+    
+    <div class="container-fluid footer__section">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="footer__top">
+                    <div class="footer__top-col">
+                        <img src="img/aitken-digital-logo-full-white.png" alt="" class="footer__logo">
+                        <p>With more than 10 years of combined experience in digital marketing and business growth, we deliver proven results.</p>
+                    </div>
+                    <div class="footer__top-col">
+                        <ul class="footer__top-ul">
+                            <li class="footer__top-li"><a href="#">Home</a></li>
+                            <li class="footer__top-li"><a href="">Privacy Policy</a></li>
+                            <li class="footer__top-li"><a href="">Terms Of Service</a></li>
+                            <li class="footer__top-li"><a href="">Disclaimer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <span>© 2020 Aitken Industries. All Rights Reserved.</span>
+                    <!-- <ul class="footer__bottom-ul">
+                        <li class="footer__bottom-li">Menu Item</li>
+                        <li class="footer__bottom-li">Menu Item</li>
+                        <li class="footer__bottom-li">Menu Item</li>
+                        <li class="footer__bottom-li">Menu Item</li>
+                        <li class="footer__bottom-li">Menu Item</li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var menuBtn = document.getElementById('menuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.onclick = function() {
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    };
+
+    AOS.init();
+
+
+</script>
+</html>
