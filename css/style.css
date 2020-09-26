@@ -749,6 +749,7 @@ Our Focus
 }
 .ourFocus__img {
   max-width: 44%;
+  max-height: 503px;
   width: auto;
   height: auto;
   z-index: 1;
