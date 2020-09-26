@@ -819,6 +819,9 @@ Our Focus
   .ourFocus__img-wrap {
     padding-top: 50px;
   }
+  .ourFocus__img {
+    max-height: 318px;
+  }
 }
 
 /*---------------------------------------------------------
