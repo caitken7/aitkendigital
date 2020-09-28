@@ -70,12 +70,13 @@
                     </ul>
                 </div>
                 <div class="mobile-menu" id="mobileMenu">
-                    <ul class="mobile-menu__list">
-                        <li class="mobile-menu__li">Menu Item</li>
-                        <li class="mobile-menu__li">Menu Item</li>
-                        <li class="mobile-menu__li">Menu Item</li>
-                        <li class="mobile-menu__li">Menu Item</li>
-                    </ul>
+                    <div class="mobile-menu__inner">
+                        <div class="mobile-menu__logo-wrap">
+                            <img src="img/aitken-digital-logo-full-white.png" alt="" class="mobile-menu__logo">
+                        </div>
+                        <ul class="mobile-menu__list">
+                        </ul>
+                    </div>
                 </div>
                 <button class="menu-btn" id="menuBtn">
                     <span></span>
@@ -270,14 +271,33 @@
 
 </body>
 <script>
-    var menuBtn = document.getElementById('menuBtn');
-    var mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.onclick = function() {
-        this.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-    };
 
     AOS.init();
+
+    // var menuBtn = document.getElementById('menuBtn');
+    // var mobileMenu = document.getElementById('mobileMenu');
+    // menuBtn.onclick = function() {
+    //     this.classList.toggle('active');
+    //     mobileMenu.classList.toggle('active');
+    // };
+
+    function toggleMobileMenu() {
+        $('#menuBtn').toggleClass('active');
+        $('#mobileMenu').toggleClass('active');
+        $('html').toggleClass('mobile-menu-active');
+    }
+
+    $('.desktop-menu__li').each(function(){
+        $(this).clone().removeClass().addClass('mobile-menu__li').appendTo(".mobile-menu__list");
+    });
+
+    $('#menuBtn').click(function(){
+        toggleMobileMenu();
+    });
+
+    $('.mobile-menu__li').click(function(){
+        toggleMobileMenu();
+    });
 
 
 </script>

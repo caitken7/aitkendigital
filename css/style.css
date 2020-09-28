@@ -497,11 +497,9 @@ Header
 .menu-btn.active:before {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
-  background: #646080;
 }
 .menu-btn.active:after {
   transform: translateY(-50%) rotate(45deg);
-  background: #646080;
   
 }
 .menu-btn.active>span:before {
@@ -511,32 +509,72 @@ Header
 .mobile-menu {
   position: fixed;
   height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s all ease;
+}
+.mobile-menu__inner {
+  position: fixed;
+  height: 100vh;
   width: 500px;
-  max-width: 100%;
+  max-width: 90%;
   top: 0;
   right: 0;
   bottom: 0;
-  padding: 60px 30px 30px;
-  background: #fff;
+  padding: 70px 30px 30px;
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
   transform: translateX(100%);
   transition: .3s all ease;
   z-index: 2;
 }
 .mobile-menu.active {
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
+}
+.mobile-menu.active .mobile-menu__inner {
   transform: translateX(0%);
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+}
+.mobile-menu__logo-wrap {
+
+}
+.mobile-menu__logo {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.mobile-menu__list {
+  padding-top: 25px;
+}
+.mobile-menu__li {
+}
+.mobile-menu__li a {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  font-weight: 500;
+}
+.mobile-menu__li .desktop-menu__cta {
+  margin-top: 15px;
+  padding: 15px 0;
+}
+html.mobile-menu-active {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 @media(min-width: 1025px) {
   .menu-btn {
     display: none;
   }
 }
-
-/* --------- */
-
-.centered {
-  text-align: centered;
-} 
 
 /*---------------------------------------------------------
 Hero
